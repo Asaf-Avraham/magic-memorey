@@ -7,9 +7,10 @@ export default function SingleCard ({ card, handleChoise, flipped }) {
       handleChoise(card)
    }
    
+   //if flipped is true then we styling the flipped class
    return( 
         <div className="card">
-          <div className = {flipped? "flipped" : ""}>
+          <div className = {flipped ? "flipped" : ""}>  
              <img className="front" src={card.src} alt="card front" />
              <img 
                 className="back"  
