@@ -1,10 +1,12 @@
 import './SingleCard.css'
 import React from 'react';
 
-export default function SingleCard ({ card, handleChoise, flipped }) {
+export default function SingleCard ({ card, handleChoise, flipped, disabled }) {
    
    const handleClick = () => {
-      handleChoise(card)
+      if (!disabled) {
+         handleChoise(card)
+      }
    }
    
    //if flipped is true then we styling the flipped class
