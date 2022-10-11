@@ -5,13 +5,15 @@ import SingleCard from './components/SingleCard';
 
 
 const cardImages = [
-  {"src": "/img/helmet-1.png", matched: false},
-  {"src": "/img/potion-1.png", matched: false},
-  {"src": "/img/ring-1.png", matched: false},
-  {"src": "/img/scroll-1.png", matched: false},
-  {"src": "/img/shield-1.png", matched: false},
-  {"src": "/img/sword-1.png", matched: false},
+  {"src": "/imgNotes/C3.png", matched: false, sound: ("/musicNotes/C3.mp3")},
+  {"src": "/imgNotes/D3.png", matched: false, sound: ("/musicNotes/D3.mp3")},
+  {"src": "/imgNotes/E3.png", matched: false, sound: ("/musicNotes/E3.mp3")},
+  {"src": "/imgNotes/F3.png", matched: false, sound: ("/musicNotes/F3.mp3")},
+  {"src": "/imgNotes/G3.png", matched: false, sound: ("/musicNotes/G3.mp3")},
+  {"src": "/imgNotes/A3.png", matched: false, sound: ("/musicNotes/A3.mp3")},
+  {"src": "/imgNotes/B3.png", matched: false, sound: ("/musicNotes/B3.mp3")},
 ]
+
 
 function App() {
   const [cards, setCards] = useState([])
@@ -25,21 +27,21 @@ function App() {
       const shuffledCards = [...cardImages,...cardImages]  //duplicate cards
         .sort(()=> Math.random() - 0.5)
         .map((card) => ({ ...card, id: Math.random() })) //adding id to each item
-  
+        
   setChoiseOne(null)
   setChoiseTwo(null)  
    setCards(shuffledCards)
    setTurns(0)
   }
-
-  const handleChoise = (card) => {
-    choiseOne ? setChoiseTwo(card) : setChoiseOne(card)  
   
-  }
- 
+  const handleChoise = (card) => {
+    choiseOne ? setChoiseTwo(card) : setChoiseOne(card) 
+    
+   }
+
   //compare 2 selected cards
   useEffect(()=> {
-     
+
      if(choiseOne && choiseTwo) {
         setDisabled(true)
         
@@ -57,7 +59,7 @@ function App() {
             resetTurns() 
       
         } else {
-            setTimeout(()=> resetTurns(), 1500)
+            setTimeout(()=> resetTurns(), 1000)
           }
       }
   }, [choiseOne, choiseTwo])
@@ -81,7 +83,7 @@ function App() {
 
   return (
     <div className="App">
-        <h1>Magic Match</h1>
+        <h1>Music Match</h1>
         <button onClick = {shuffleCards}> New Game </button>
         
         <div className="card-grid">
