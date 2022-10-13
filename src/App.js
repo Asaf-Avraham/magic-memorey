@@ -5,13 +5,12 @@ import SingleCard from './components/SingleCard';
 
 
 const cardImages = [
-  {"src": "/imgNotes/C3.png", matched: false, sound: ("/musicNotes/C3.mp3")},
-  {"src": "/imgNotes/D3.png", matched: false, sound: ("/musicNotes/D3.mp3")},
-  {"src": "/imgNotes/E3.png", matched: false, sound: ("/musicNotes/E3.mp3")},
-  {"src": "/imgNotes/F3.png", matched: false, sound: ("/musicNotes/F3.mp3")},
-  {"src": "/imgNotes/G3.png", matched: false, sound: ("/musicNotes/G3.mp3")},
-  {"src": "/imgNotes/A3.png", matched: false, sound: ("/musicNotes/A3.mp3")},
-  {"src": "/imgNotes/B3.png", matched: false, sound: ("/musicNotes/B3.mp3")},
+  {"src": "/img/helmet-1.png", matched: false },
+  {"src": "/img/potion-1.png", matched: false },
+  {"src": "/img/ring-1.png", matched: false },
+  {"src": "/img/scroll-1.png", matched: false },
+  {"src": "/img/shield-1.png", matched: false,},
+  {"src": "/img/sword-1.png", matched: false },
 ]
 
 
@@ -35,8 +34,7 @@ function App() {
   }
   
   const handleChoise = (card) => {
-    choiseOne ? setChoiseTwo(card) : setChoiseOne(card) 
-    
+    choiseOne ? setChoiseTwo(card) : setChoiseOne(card)  
    }
 
   //compare 2 selected cards

@@ -7,11 +7,6 @@ export default function SingleCard ({ card, handleChoise, flipped, disabled }) {
       if (!disabled) {
          handleChoise(card)
       }
-     
-      const note = new Audio(card.sound)
-      note.play();
-          
-      
    }
    
    //if flipped is true then we styling the flipped class
@@ -21,7 +16,7 @@ export default function SingleCard ({ card, handleChoise, flipped, disabled }) {
              <img className="front" src={card.src} alt="card front" />
              <img 
                 className="back"  
-                src="imgNotes/cover.png" 
+                src="img/cover.png" 
                 onClick = {handleClick} 
                 alt="card back" 
               />
